@@ -1,0 +1,154 @@
+/* Retro Style CSS */
+
+/* Import a retro font */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+    font-family: 'Press Start 2P', cursive;
+    background-color: #000; /* Black background */
+    color: #00ff00; /* Bright green text */
+    margin: 0;
+    padding: 0;
+}
+
+.game-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #ff00ff; /* Magenta color */
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#home-screen, #game-screen, #game-over {
+    background-color: #000; /* Black background */
+    border: 2px solid #00ff00; /* Bright green border */
+    padding: 20px;
+    border-radius: 0;
+    margin-bottom: 20px;
+}
+
+#home-screen p {
+    font-size: 14px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+#question {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+#answer {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #000;
+    color: #00ff00;
+    border: 2px solid #00ff00;
+    margin-bottom: 10px;
+}
+
+#submit-btn, #restart-btn, #start-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #000;
+    color: #00ff00;
+    border: 2px solid #00ff00;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#submit-btn:hover, #restart-btn:hover, #start-btn:hover {
+    background-color: #00ff00;
+    color: #000;
+}
+
+#timer, #score {
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+#time-left {
+    font-weight: bold;
+}
+
+#current-score, #final-score {
+    font-weight: bold;
+    color: #ff00ff; /* Magenta color */
+}
+
+/* Results table styling */
+#results {
+    margin-top: 20px;
+}
+
+#results h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+#results table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #00ff00;
+}
+
+#results th, #results td {
+    border: 1px solid #00ff00;
+    padding: 8px;
+    font-size: 12px;
+}
+
+#results th {
+    background-color: #000;
+}
+
+#results tr:nth-child(even) {
+    background-color: #111;
+}
+
+#results tr:hover {
+    background-color: #222;
+}
+
+#results td {
+    text-align: center;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+    #answer {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    #question, #home-screen p {
+        font-size: 14px;
+    }
+
+    #timer, #score {
+        font-size: 12px;
+    }
+
+    #results th, #results td {
+        font-size: 10px;
+        padding: 5px;
+    }
+}
+/* Add transition effect */
+#home-screen, #game-screen, #game-over {
+    transition: opacity 0.5s ease-in-out;
+}
+
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
